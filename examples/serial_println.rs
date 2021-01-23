@@ -43,8 +43,8 @@ async fn main() {
     let mut args = env::args();
     let tty_path = args.nth(1).unwrap_or_else(|| DEFAULT_TTY.into());
 
-    let settings = tokio_serial::SerialPortSettings::default();
-    let mut port = tokio_serial::Serial::from_path(tty_path, &settings).unwrap();
+    let builder = tokio_serial::new(tty_path, 460800);
+    let mut port = tokio_serial::Serial::from_builder(builder).unwrap();
 
     #[cfg(unix)]
     port.set_exclusive(false)

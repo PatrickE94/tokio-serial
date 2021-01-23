@@ -22,7 +22,7 @@ libudev = ["mio-serial/libudev"]
 
 [dependencies]
 futures = "0.3"
-mio-serial = { version = "3.3.0", default-features = false }
+mio-serial = { git = "https://github.com/patricke94/mio-serial", branch = "master", default-features = false }
 tokio = { version = "1.1", features = ["io-util", "net"], default-features = false }
 
 [dev-dependencies]
