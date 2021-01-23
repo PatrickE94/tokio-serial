@@ -1,5 +1,10 @@
 # tokio-serial
 
+NOTE: This is a forked repo, it was forked to provide opinionated support for tokio 1.1
+before the maintainer has had the time to update the main repo. Sadly, there is no
+natural support for Windows in Tokio 1.1 using mio event source. However, the
+forked mio-serial does support windows!
+
 An implementation of  serialport I/O for Tokio, an async framework for rust.
 
 [![crates.io](http://meritbadge.herokuapp.com/tokio-serial)](https://crates.io/crates/tokio-serial)
